@@ -1,36 +1,41 @@
-<div id="app">
-  <table>
-    <thead>
-      <tr>
-        <th>Country</th>
-        <th>Currency Code (ISO)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(currency, country) in currencyList" :key="country">
-        <td>{{ country }}</td>
-        <td>{{ currency }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+# WestinPay Currency Rates API
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      currencyList: {}
-    },
-    mounted() {
-      fetch('https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON')
-        .then(response => response.json())
-        .then(data => {
-          this.currencyList = data.rates;
-        })
-        .catch(error => {
-          console.error('Error fetching currency rates:', error);
-        });
-    }
-  });
-</script>
+WestinPay's Free Currency Fiat API provides real-time exchange rates and currency conversion for over 152 currencies. It's ideal for financial apps, e-commerce platforms, and travel services.
+
+## Endpoint
+
+The WestinPay Currency Rates Endpoint delivers real-time exchange rates.
+
+### Authentication
+
+Once you have created an account on [WestinPay](https://westinpay.com/merchant/register), your account will be assigned a unique 32-character API key. Think of this like a secure password; keep it safe and do not share it with others.
+
+### Parameters
+
+- **base**: The base currency for conversion. Default is USD.
+- **output**: Response format, either JSON or XML. Default is JSON.
+- **api_key**: Your unique API key. Replace YOUR-API-KEY with your actual API key.
+
+### Code Example
+
+To fetch the latest rates using cURL and authenticate with your API key, use the following command:
+
+```sh
+curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
+
+
+
+| Country                       | Currency Code (ISO) |
+|-------------------------------|---------------------|
+| United States Dollar          | USD                 |
+| Euro                          | EUR                 |
+| British Pound Sterling        | GBP                 |
+| Japanese Yen                  | JPY                 |
+| Swiss Franc                   | CHF                 |
+| Canadian Dollar               | CAD                 |
+| Australian Dollar             | AUD                 |
+| New Zealand Dollar            | NZD                 |
+| Afghan Afghani                | AFN                 |
+| Albanian Lek                  | ALL                 |
+| Algerian Dinar                | DZD                 |
+| ...                           | ...                 |
