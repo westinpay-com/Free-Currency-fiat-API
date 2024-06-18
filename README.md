@@ -22,9 +22,12 @@ To fetch the latest rates using cURL and authenticate with your API key, use the
 
 ```sh
 curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
+
+
 <details>
 <summary>Response Example</summary>
-The response will be in JSON format and will include the following structure:
+
+```json
 {
   "valid": true,
   "updated": 1526293289,
@@ -39,3 +42,13 @@ The response will be in JSON format and will include the following structure:
   }
 }
 </details>
+```
+
+
+
+
+
+
+
+
+
