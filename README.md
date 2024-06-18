@@ -18,10 +18,11 @@ Fetch the latest rates using the curl command:
 ```sh
 curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
 
+
+```sh
 Response
 The response will be in JSON format and will include the following structure:
 
-json
 
 {
   "valid": true,
