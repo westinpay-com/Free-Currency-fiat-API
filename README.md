@@ -17,3 +17,22 @@ Fetch the latest rates using the curl command:
 
 ```sh
 curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
+
+Response
+The response will be in JSON format and will include the following structure:
+
+json
+
+{
+  "valid": true,
+  "updated": 1526293289,
+  "base": "USD",
+  "rates": {
+    "AED": 5.2204725081026,
+    "AFN": 99.505376130096,
+    "ALL": 148.13498464775,
+    "AMD": 683.01869278444,
+    "ANG": 2.5307798373799,
+    ...
+  }
+}
