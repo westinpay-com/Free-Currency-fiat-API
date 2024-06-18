@@ -14,7 +14,7 @@ Once you have created an account on [WestinPay](https://westinpay.com/merchant/r
 
 - **base**: The base currency for conversion. Default is USD.
 - **output**: Response format, either JSON or XML. Default is JSON.
-- **api_key**: Your unique API key. Replace YOUR_API_KEY with your actual API key.
+- **api_key**: Your unique API key. Replace YOUR-API-KEY with your actual API key.
 
 ### Code Example
 
@@ -22,3 +22,20 @@ To fetch the latest rates using cURL and authenticate with your API key, use the
 
 ```sh
 curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
+<details>
+<summary>Response Example</summary>
+The response will be in JSON format and will include the following structure:
+{
+  "valid": true,
+  "updated": 1526293289,
+  "base": "USD",
+  "rates": {
+    "AED": 5.2204725081026,
+    "AFN": 99.505376130096,
+    "ALL": 148.13498464775,
+    "AMD": 683.01869278444,
+    "ANG": 2.5307798373799,
+    ...
+  }
+}
+</details>
