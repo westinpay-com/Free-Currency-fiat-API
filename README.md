@@ -22,20 +22,3 @@ To fetch the latest rates using cURL and authenticate with your API key, use the
 
 ```sh
 curl --location --request GET 'https://westinpay.com/currency/fiat_api?api_key=YOUR-API-KEY&base=USD&output=JSON'
-
-
-
-| Country                       | Currency Code (ISO) |
-|-------------------------------|---------------------|
-| United States Dollar          | USD                 |
-| Euro                          | EUR                 |
-| British Pound Sterling        | GBP                 |
-| Japanese Yen                  | JPY                 |
-| Swiss Franc                   | CHF                 |
-| Canadian Dollar               | CAD                 |
-| Australian Dollar             | AUD                 |
-| New Zealand Dollar            | NZD                 |
-| Afghan Afghani                | AFN                 |
-| Albanian Lek                  | ALL                 |
-| Algerian Dinar                | DZD                 |
-| ...                           | ...                 |
